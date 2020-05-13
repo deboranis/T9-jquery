@@ -13,16 +13,16 @@ do input deve completar a frase.
 
 
 $(document).ready(function() {
-    // const fulana = $('#campo-nome').val();
-    // if (fulana == undefined || fulana == '') {
-    //     alert('por favor, preencha o campo, desgraça');
-    //     $('input').val('');
-    //     return false;
-    // } else {
 
     $('#botao-replicar').click(function() {
-        const fulana = $('#campo-nome').val();
-        $('h2').text('A desenvolvedora mais incrível desse ano será a... ' + fulana);
-        $('input').val('');
+        let fulana = $('#campo-nome').val();
+        let inputValido = fulana.trim();
+
+        if (inputValido != '') {
+            $('h2').text('A desenvolvedora mais incrível desse ano será a... ' + fulana);
+            $('input').val('');
+        } else {
+            alert('preenche o campo, desgraçaaa');
+        }
     })
 })

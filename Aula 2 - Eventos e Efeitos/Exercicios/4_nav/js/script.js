@@ -16,3 +16,18 @@ $(document).ready(function() {
     })
 
 })
+
+// tentar resolver com eq!
+
+
+$(document).ready(function() {
+    $('li').hover(function() {
+        $(this).find('.menu2').slideToggle();
+    })
+    $("li").hover(function() {
+            $(this).find(".menu2").slideDown(2000);
+        },
+        function() {
+            $(this).find(".menu2").slideUp("fast");
+        })
+})
